@@ -30,7 +30,7 @@ function performAction(e) {
       postData('/addWeather', {date: appDate ,temp: data.main.temp, feel: feelings })
     })
     .then(function () {
-      updateUI()
+      updateUI() 
     })
     .catch(function(zipCode){
       //return an error if the zip code not found in the API
@@ -53,12 +53,12 @@ const getWeather = async (baseURL, zipCode, apiKey)=>{
     } catch (error) {
       console.log("error", error);
     }
+
 }
 
 /* 2. Function to POST data */
 
 const postData = async ( url = `${serverURL}addWeather`, data = {})=>{
-
   const response = await fetch(url, {
   method: 'POST', 
   credentials: 'same-origin', 
@@ -86,7 +86,6 @@ const updateUI = async () => {
     document.getElementById('date').innerHTML = `Date: ${allData.date}`;
     document.getElementById('temp').innerHTML = `Temp: ${allData.temp}C`;
     document.getElementById('content').innerHTML = `My Feelings: ${allData.feel}`;
-
   } catch (error) {
     console.log("error", error);
   }
