@@ -42,5 +42,5 @@ If you want to run this project in your machine, you need to:
 
 1. Copy this server url into your browser : http://localhost:8000/
 2. Using command line : 
-* cd <project directory>
-* node server.js
+    * $cd (project directory)
+    * $node server.js
